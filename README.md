@@ -1,19 +1,20 @@
-# Project Name
+# Predictive Safety Dashboard
 
 ## Problem Statement
-Explain clearly what problem your project is solving.
+Road accidents and vehicle-related emergencies often escalate due to delayed hazard detection and a lack of real-time communication between the vehicle, its owner, and emergency authorities. Current monitoring solutions lack "predictive intervention"—the ability to proactively detect an impending hazard and immediately alert relevant parties before a situation worsens.
 
 ## Project Description
-Describe your solution, how it works, and what makes it useful.
+The **Predictive Safety Dashboard** is a real-time Road Hazard and Safety Monitoring System built to demonstrate "Predictive Intervention." It features a live Edge AI dashboard that visualizes vehicle telemetry (such as speed and location) and performs real-time geofencing (centered around Kerala). The dashboard uses SVG overlays to simulate AI-driven hazard detection and automatically triggers email alerts to vehicle owners and authorities via a Node.js backend when an unsafe condition is identified.
 
 ---
 
 ## Google AI Usage
 ### Tools / Models Used
-- 
+- **Google Gemini** (Generative AI for rapid prototyping and architecture design)
+- Simulated Google Edge TPU processing (For visual hazard detection logic)
 
 ### How Google AI Was Used
-Explain clearly how AI is integrated into your project.
+Google AI was an instrumental part of developing this prototype. We used Google's models to help design the "Predictive Intervention" geofencing algorithms, structure our vehicle telemetry data flow, and generate the foundational code for our automated alert system. The conceptualization of how an Edge AI model would process live video feeds and trigger instant safety notifications relies heavily on patterns designed with Google AI.
 
 ---
 
@@ -21,14 +22,16 @@ Explain clearly how AI is integrated into your project.
 Attach screenshots in a `/proof` folder:
 
 ![AI Proof](./proof/screenshot1.png)
+*(Note: Please add your actual screenshots of Gemini usage or Google AI service logs in a `proof` folder)*
 
 ---
 
 ## Screenshots 
 Add project screenshots:
 
-![Screenshot1](./assets/screenshot1.png)  
-![Screenshot2](./assets/screenshot2.png)
+![Dashboard View](./assets/screenshot1.png)  
+![Alert Triggered](./assets/screenshot2.png)
+*(Note: Please upload your dashboard screenshots to an `assets` folder)*
 
 ---
 
@@ -45,10 +48,11 @@ Upload your demo video to Google Drive and paste the shareable link here(max 3 m
 git clone <your-repo-link>
 
 # Go to project folder
-cd project-name
+cd presentation-ui
 
 # Install dependencies
 npm install
 
-# Run the project
+# Run the project (This will start the Node server on port 3000)
 npm start
+```
