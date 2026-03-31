@@ -22,14 +22,19 @@ Google AI was an instrumental part of developing this prototype. We used Google'
 Attach screenshots in a `/proof` folder:
 
 ![AI Proof](./proof/screenshot1.png)
-*(Note: Please add your actual screenshots of Gemini usage or Google AI service logs in a `proof` folder)*
-
+ <img width="1280" height="767" alt="image" src="https://github.com/user-attachments/assets/87487b8f-3a6f-465d-bc00-5ac9d7c91052" />
+ <img width="1277" height="667" alt="image" src="https://github.com/user-attachments/assets/6a972f82-3afa-4197-a86f-97bff6c10db8" />
+https://drive.google.com/drive/folders/1DvKvrbKEjC9fNmWK_aEeQQYNydjQZtrK?usp=drive_link
 ---
 
 ## Screenshots 
 Add project screenshots:
 
-![Dashboard View](./assets/screenshot1.png)  
+<img width="1280" height="672" alt="image" src="https://github.com/user-attachments/assets/dfde5585-97cd-40d1-9acb-760edaa5797e" />
+<img width="1259" height="668" alt="image" src="https://github.com/user-attachments/assets/d917edd0-b03a-4f3f-b30e-ced0693aebcd" />
+https://drive.google.com/drive/folders/1DvKvrbKEjC9fNmWK_aEeQQYNydjQZtrK?usp=drive_link
+
+
 ![Alert Triggered](./assets/screenshot2.png)
 *(Note: Please upload your dashboard screenshots to an `assets` folder)*
 
@@ -37,7 +42,8 @@ Add project screenshots:
 
 ## Demo Video
 Upload your demo video to Google Drive and paste the shareable link here(max 3 minutes).
-[Watch Demo](#)
+https://drive.google.com/drive/folders/1DvKvrbKEjC9fNmWK_aEeQQYNydjQZtrK?usp=drive_link
+
 
 ---
 
