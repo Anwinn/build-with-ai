@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Road Hazard & Safety Monitoring System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Edge Data Visualization Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero slide-up">
+        <div class="container">
+            <h1 class="headline">Real-time data.<br><span class="accent">Predictive safety.</span></h1>
+            <p class="subtitle">An intelligent <b>road hazard and safety monitoring system</b> built to intervene before accidents happen.</p>
+            <div class="scroll-indicator">
+                <span>Discover the Impact</span>
+                <div class="line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Primary Targets (The Money Maker) -->
+    <section class="primary-targets">
+        <div class="container slide-up">
+            <div class="section-badge">The Core Market</div>
+            <h2 class="section-title">Where this will actually be used.</h2>
+            <p class="section-desc">Unlike traditional systems that react after accidents, we focus on predicting intent — which is where prevention actually happens.</p>
+            
+            <div class="target-cards">
+                <div class="card premium-card staggered-fade">
+                    <div class="card-icon">🚛</div>
+                    <h3>Fleet & Logistics</h3>
+                    <p>Detect risky behavior and reduce accidents in real-time before they cost the company heavily in damages and delays.</p>
+                    <div class="alert-example">⚠️ “Driver #42 shows high-risk braking patterns”</div>
+                </div>
+
+                <div class="card premium-card staggered-fade">
+                    <div class="card-icon">🚓</div>
+                    <h3>Insurance Companies</h3>
+                    <p>Calculate live driver risk scores to dynamically adjust insurance premiums based on hard predictive data.</p>
+                    <div class="alert-example">📊 70% high-risk behavior detected</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Expansion Grid -->
+    <section class="expansion-grid">
+        <div class="container slide-up">
+            <div class="section-badge">Additional Applications</div>
+            <h2 class="section-title">Scalable Across the Ecosystem</h2>
+            
+            <div class="bento-grid">
+                
+                <div class="bento-item staggered-fade">
+                    <div class="icon">🚗</div>
+                    <h4>ADAS Integration</h4>
+                    <p>Runs inside the car to monitor driving behavior and warn before danger strikes.</p>
+                </div>
+                
+                <div class="bento-item staggered-fade">
+                    <div class="icon">🚕</div>
+                    <h4>Ride-Sharing</h4>
+                    <p>Detects unsafe drivers for Uber/Ola to instantly alert the system and the passenger.</p>
+                </div>
+
+                <div class="bento-item staggered-fade">
+                    <div class="icon">🏍️</div>
+                    <h4>Smart Helmet & Bikes</h4>
+                    <p>Attaches sensors to helmets to detect rash driving and sudden braking.</p>
+                </div>
+
+                <div class="bento-item staggered-fade">
+                    <div class="icon">🏫</div>
+                    <h4>Driver Training</h4>
+                    <p>Analyzes student driving habits and provides actionable safety feedback.</p>
+                </div>
+
+                <div class="bento-item staggered-fade" style="border-color: rgba(255, 204, 0, 0.5);">
+                    <div class="icon">💡</div>
+                    <h4 style="color: #ffcc00;">Auto Bright System</h4>
+                    <p>Smart detector automatically toggles high/low beams to prevent blinding oncoming traffic.</p>
+                </div>
+
+                <div class="bento-item wide-item staggered-fade">
+                    <div class="icon">🏙️</div>
+                    <div>
+                        <h4>Smart Cities / Government</h4>
+                        <p>Monitors traffic patterns, detects dangerous zones, and potentially integrates with **Google Maps data** to combine driver behavior with real road conditions for massive city-wide optimizations.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Live Prototype Dashboard -->
+    <section class="dashboard-section" id="live-demo">
+        <div class="container slide-up">
+            <div class="dashboard-header">
+                <div>
+                    <div class="section-badge" style="border-color: #4285F4; color: #4285F4;">Google Edge TPU Active</div>
+                    <h2 class="section-title" style="margin-bottom: 5px;">AI Co-Pilot Dashboard</h2>
+                    <p class="section-desc" style="margin-bottom: 20px;">Zero-latency predictive intervention. Real-time geofencing via Google Maps integration.</p>
+                </div>
+                <div class="demo-controls">
+                    <button id="startDemoBtn" class="cta-button" style="background-color: #4285F4; color: #fff;">▶ Initialize Live Feed</button>
+                    <div class="latency-indicator" id="latencyIndicator" style="color:#0F9D58;">Latency: -- ms</div>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid layout-google">
+                
+                <!-- Left Panel: Kerala Map -->
+                <div class="dash-panel fade-in-panel">
+                    <div class="panel-header">
+                        <h3 style="color:#4285F4;">📍 Live GPS Path</h3>
+                    </div>
+                    <p class="panel-desc">Tracking movement across NH66 (Ernakulam Zone).</p>
+                    <div class="map-container" id="cityMap" style="height: 350px;"></div>
+                </div>
+
+                <!-- Center Panel: Vision Overlay -->
+                <div class="dash-panel fade-in-panel">
+                    <div class="panel-header">
+                        <h3 style="color:#0F9D58;">👁️ Google Vision Feed</h3>
+                        <span class="pulse-dot"></span>
+                    </div>
+                    <p class="panel-desc">Real-time object detection and trajectory analysis.</p>
+                    <div class="vision-container" id="visionContainer" style="height: 350px; position:relative; background:#000; overflow:hidden; border-radius:8px; border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="vision-road"></div>
+                        <svg class="vision-svg" id="visionSvg" width="100%" height="100%" style="position:absolute; top:0; left:0; z-index:10;"></svg>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Telemetry & Status -->
+                <div class="dash-panel fade-in-panel telemetry-panel">
+                    <div class="panel-header">
+                        <h3>📟 Live Telemetry</h3>
+                    </div>
+                    <p class="panel-desc">G-Force, Speed, and Status</p>
+                    
+                    <div class="hud-metric google-metric">
+                        <span class="hud-label">OVERALL STATUS</span>
+                        <span class="hud-value" id="overallStatus" style="color:#0F9D58; font-size:1.8rem;">SAFE (Cruising)</span>
+                    </div>
+
+                    <div class="hud-container column-layout" style="margin-top: 20px;">
+                        <div class="hud-metric">
+                            <span class="hud-label">SPEED</span>
+                            <span class="hud-value" id="hudSpeed">0 <small>km/h</small></span>
+                        </div>
+                        <div class="hud-metric">
+                            <span class="hud-label">LATERAL G-FORCE</span>
+                            <span class="hud-value" id="hudGForce">0.05 G</span>
+                        </div>
+                        <div class="hud-metric">
+                            <span class="hud-label">VERTICAL G-FORCE</span>
+                            <span class="hud-value" id="hudGForceVert">1.00 G</span>
+                        </div>
+                        <div class="hud-metric" style="grid-column: span 2; border-color: rgba(0, 240, 255, 0.4); background: rgba(0, 240, 255, 0.05); padding: 15px;">
+                            <span class="hud-label" style="color:#00F0FF; font-size: 14px;">⚡ AI OVERTAKE WHISPERER</span>
+                            <span class="hud-value" id="hudOvertake" style="color:#00F0FF; font-size: 2.2rem; margin-top: 5px;">--%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="log-container" id="interventionLog" style="height: 70px; margin-top: 15px; border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
+                        <div class="log-item default-log">No anomalies detected.</div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="demo-status" id="demoStatus" style="text-align: center; margin-top: 20px;"></div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
